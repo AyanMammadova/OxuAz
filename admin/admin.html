@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPanel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/newspaper-64.webp" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="min-h-[100vh] bg-[#0D1A35] flex">
+    <aside class="flex flex-col text-white font-bold w-[12%] bg-[#07122b] h-[100vh] pt-[20px] px-[10px]">
+        <a class="bg-[#1e3468] p-[5px] my-[4px] rounded hover:bg-[white] hover:text-black" href="/index.html" target="_blank">Oxu.az</a>
+        <a class="bg-[#1e3468] p-[5px] my-[4px] rounded bg-[white] text-black" href="">Admin Panel</a>
+    </aside>
+    <div id="form" class="hidden w-[100%] h-[100vh] fixed flex justify-center text-white     items-center bg-[#80808080] fixed z-50">
+        <form id="form"  class=" fixed bg-[#07122b] text-white w-[70%] m-[auto]  flex flex-col  text-black  border-2 py-[20px] " onsubmit="handleSubmit(event)">
+            <p onclick="handleform()" class="fa-solid fa-circle-xmark text-3xl absolute right-[10px] top-[10px] text-white cursor-pointer"></p>
+            <p class="text-2xl font-bold text-center">Xəbəri əlavə edin</p>
+            <p class="w-11/12 m-[auto]">Xəbər başlığınızı əvalə edin</p>
+            <input type="text" id="title" class="my-[10px] w-11/12 m-[auto] rounded text-black">
+
+            <p class="w-11/12 m-[auto]">Xəbər haqqında ətraflı məlumat əlavə edin</p>
+            <textarea type="text" id="description" class="my-[10px] h-[100px] w-11/12 m-[auto] rounded text-black"></textarea>
+
+            <p class="w-11/12 m-[auto]">Şəkili əlavə edin</p>
+            <input type="text" name="" id="img" class="my-[10px] w-11/12 m-[auto] rounded text-black">
+
+            <p class="w-11/12 m-[auto]">Tarix əlavə edin</p>
+            <input type="date" name="" id="date" class="my-[10px] w-11/12 m-[auto] rounded text-black">
+            
+            <p class="w-11/12 m-[auto]">Saat daxil edin</p>
+            <input type="time" name="" id="time" class="my-[10px] w-11/12 m-[auto] rounded text-black">
+
+            <button type="submit"  id="submitbutton" class="my-[20px] bg-white w-[200px] text-black font-bold rounded m-[auto]">Xəbər əlavə et</button>
+        </form>
+    </div>
+    <main class=" bg-[#0D1A35] w-[85%]">
+        <button onclick="handleform()" id="showbutton" class=" bg-white w-[200px] h-[50px] m-[20px] text-black font-bold rounded">Xəbər yaz</button>
+        <table id="table" class="table-fixed w-[95%] m-[auto] mt-[50px] bg-gray-300 min-h-[10vh] ">  
+        </table>
+        
+        
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
