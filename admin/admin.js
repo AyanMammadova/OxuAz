@@ -12,7 +12,6 @@ const cardContainer=document.getElementById("cardContainer")
 const submitbutton=document.getElementById("submitbutton")
 
 function handleSubmit(event){
-    console.log("isledimmmm");
     
     event.preventDefault()
     const  titleValue=title.value
@@ -53,7 +52,7 @@ function handleSubmit(event){
         editfunction(id,obj)
     }
     else{
-        fetch('https://67051c47031fd46a830eae14.mockapi.io/oxuaz/article', {
+        fetch('https://679798adc2c861de0c6d53a3.mockapi.io/articles/articles', {
             method: 'POST',
             body: JSON.stringify(obj),
             headers: {
@@ -84,7 +83,7 @@ function clearValues(){
 
 let DATA=[]
 function handleData(){
-    fetch('https://67051c47031fd46a830eae14.mockapi.io/oxuaz/article')
+    fetch('https://679798adc2c861de0c6d53a3.mockapi.io/articles/articles')
     .then(res=>res.json())
     .then(data=>{
         DATA.length=0
@@ -151,7 +150,7 @@ function editNews(index){
 }
 
 function editfunction(index,editedobj){
-    fetch(`https://67051c47031fd46a830eae14.mockapi.io/oxuaz/article/${index}`, {
+    fetch(`https://679798adc2c861de0c6d53a3.mockapi.io/articles/articles/${index}`, {
         method: 'PUT',
         body: JSON.stringify(editedobj),
         headers: {
@@ -169,7 +168,7 @@ function editfunction(index,editedobj){
 }
 
 function deleteNews(index){
-    fetch(`https://67051c47031fd46a830eae14.mockapi.io/oxuaz/article/${index}`, {
+    fetch(`https://679798adc2c861de0c6d53a3.mockapi.io/articles/articles/${index}`, {
         method: 'DELETE',
     })
     .then(res=>res.json)

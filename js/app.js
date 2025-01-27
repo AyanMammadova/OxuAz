@@ -17,7 +17,7 @@ let carouselData=[]
                 // GET DATA AND LAST 3 NEWS DATA
 
 function handleData(){
-    fetch('https://67051c47031fd46a830eae14.mockapi.io/oxuaz/article')
+    fetch('https://679798adc2c861de0c6d53a3.mockapi.io/articles/articles')
     .then(res=>res.json())
     .then(data=>{
         DATA.length=0
@@ -55,7 +55,7 @@ function showCard(){
             <a  href="/pages/pages.html?id=${item.id}" class="flex flex-col w-[90%]   shadow-2xl sm:w-[300px]">
                 <img class="h-[200px] object-cover" src="${item.img}" alt="">
                 <p class="fa-regular fa-calendar text-[gray] relative p-[10px]">
-                    <span class="capitalize text-sm">${item.date}/${item.time} </span>
+                    <span class="capitalize  text-sm">${item.date}/${item.time} </span>
                     <span class="capitalize text-sm absolute  right-[10px]"><i class="fa-solid fa-eye px-[2px]"></i>${item.view}</span>
                 </p> 
                 <p class="p-[10px]">${item.title}</p>
